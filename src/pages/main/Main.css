@@ -1,0 +1,82 @@
+.main-date {
+  display: flex;
+  justify-content: space-between;
+}
+.main-title {
+  padding: 2rem 0 1rem 0;
+}
+.main-user {
+  height: 16rem;
+  background-color: rgb(225, 225, 225);
+  border-radius: 16px;
+  background-image: url('../../assets/img/main_bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -15rem;
+
+  position: relative;
+}
+.main-user-ava {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: .5rem solid #fff;
+  background-color: #6f6f6f;
+  background-image: url(../../assets/img/ava.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: all  .3s ease-out;
+}
+.main-user-ava p {
+  opacity: 0;
+  transition: all  .3s ease-out;
+}
+.main-user-ava:hover p {
+  opacity: 1
+}
+.main-user-info {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50px;
+  bottom: -7rem
+}
+.main-user-information {
+  margin-left: 24px;
+}
+.main-user-name {
+  font-weight: 600;
+}
+.main-user-course {
+  font-size: .8rem;
+}
+.main-card-info {
+  background-color: #F9F7FC;
+  border-radius: 16px;
+  height: 20px;
+  padding: 1.5rem 2rem;
+  margin-right: 1rem;
+ 
+  width: 100%;
+}
+.main-head-title {
+  margin-bottom: 5rem;
+}
+.main-card-money {
+  background-color: blue;
+  border-radius: 16px;
+  height: 20px;
+  padding: 1.5rem 2rem;
+  width: 100%;
+}
+.main-student {
+  display: flex;
+  align-items: center;
+  margin-top: 8rem;
+}
