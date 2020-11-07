@@ -29,9 +29,11 @@ export const Main = () => {
       </div>
 
       <div className='main-student'>
-        <div className='main-card-info'>
-          
-        </div>
+          <ul className='main-card-info'>
+            <li className='main-card-item'>
+
+            </li>
+          </ul>
         <div className='main-card-money'>
           
         </div>
