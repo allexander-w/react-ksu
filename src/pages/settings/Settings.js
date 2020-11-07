@@ -1,15 +1,13 @@
-import React from 'react'
+import React from "react";
+import { MainLayout } from "../../layouts/MainLayout";
 
-export const Settings = props => {
-    return (
-        <div>Settings
-            <p>Hello, world! ASd</p>
-            <p>Hello, Earth!</p>
+export const Settings = (props) => {
 
-
-            <div>
-                Very cool
-            </div>
-        </div>
-    )
-}
+  return (
+    <MainLayout>
+      Settings
+      <p>Hello, world! ASd</p>
+      <p>Hello, Earth!</p>
+    </MainLayout>
+  );
+};

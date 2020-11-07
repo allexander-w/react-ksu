@@ -3,14 +3,21 @@ import './App.css';
 
 import { Routes }from './pages/routes'
 import { BrowserRouter as Router } from 'react-router-dom'
+import { MainContext } from './contexts/MainContext';
 
 function App() {
+
+
+  const func = num => {
+    console.log(num)
+  }
+
   return (
-    <div className="app">
+    <MainContext.Provider value={{ func }}>
       <Router>
         <Routes />
       </Router>
-    </div>
+    </MainContext.Provider>
   );
 }
 
