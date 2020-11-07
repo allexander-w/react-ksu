@@ -1,5 +1,33 @@
 .sidebar {
+  position: fixed;
+  top: 3rem;
+  left: 3rem;
+  width: calc(25% - 6rem);
+}
+.sidebar-item {
+  width: 100%;
+  border-radius: 16px;
+  height: 5rem;
 
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.active-sidebar-item {
+  background-color: #6266EB;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.active-sidebar-item .sidebar-arrow {
+  display: block;
+}
+.sidebar-nav {
+  margin-top: 4rem;
+}
+.sidebar-arrow {
+  display: none;
 }
 @media screen and (max-width: 768px) {
   .sidebar {
