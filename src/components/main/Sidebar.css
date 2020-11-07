@@ -1,5 +1,18 @@
 .sidebar {
+  position: fixed;
+  top: 3rem;
+  left: 3rem;
+  width: calc(25% - 6rem);
+}
+.sidebar-item {
+  width: 100%;
+  background-color: blue;
+  border-radius: 16px;
+  height: 6rem;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 @media screen and (max-width: 768px) {
   .sidebar {
