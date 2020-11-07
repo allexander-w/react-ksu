@@ -14,7 +14,9 @@
   padding: 0 2rem;
 }
 
-.active-sidebar-item {
+
+a.active-sidebar-item {
+  
   background-color: #6266EB;
   color: #fff;
   display: flex;
@@ -29,6 +31,23 @@
 .sidebar-arrow {
   display: none;
 }
+.sidebar-icons {
+  width: 2rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+.sidebar-icons i {
+  color: #9794A9
+}
+
+a.active-sidebar-item i {
+  color: #fff;
+
+}
+
 @media screen and (max-width: 768px) {
   .sidebar {
     display: none;
