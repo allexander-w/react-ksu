@@ -2,6 +2,8 @@ import React from 'react'
 
 export const Settings = props => {
     return (
-        <div>Settings</div>
+        <div>Settings
+            <p>Hello, world!</p>
+        </div>
     )
 }
