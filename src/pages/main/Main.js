@@ -12,7 +12,7 @@ export const Main = () => {
 
       <div className='main-head-title'>
         <h3 className='page-title main-title'>Личный кабинет студента / магитсранта</h3>
-        <p className='page-txt'>Привет, имя студента, желаем хорошего дня!</p>
+        <p className='page-txt'>Привет, имя студента, желаем хорошего дня! s</p>
       </div>
 
       <div className='main-user'>
