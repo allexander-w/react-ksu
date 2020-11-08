@@ -12,7 +12,7 @@ export const Sidebar = (props) => {
       exact: true,
     },
     {
-      path: "/studentbook",
+      path: "/student-book",
       title: "Зачетка",
       icon: "far fa-book",
     },
@@ -44,14 +44,15 @@ export const Sidebar = (props) => {
               className="sidebar-item"
               activeClassName="active-sidebar-item"
               to={item.path}
+              exact = {item.exact}
             >
-              <div>
-                <i className={item.icon} style={{ marginRight: "1rem", fontSize: '1.5rem' }}></i>{" "}
+              <div style={{display: 'flex'}}>
+                <div className='sidebar-icons'><i className={item.icon} style={{ marginRight: "1rem", fontSize: '1.5rem'}}></i></div>
                 {item.title}
               </div>
               <i className="far fa-long-arrow-alt-right sidebar-arrow"></i>
             </NavLink>
-          );
+          ) 
         })}
 
         <NavLink
@@ -60,9 +61,9 @@ export const Sidebar = (props) => {
           style={{ marginTop: '4rem' }}
           to='/settings'
         >
-          <div>
-            <i className="far fa-book" style={{ marginRight: "1rem" }}></i>
-            Натсройки
+          <div style={{ display: 'flex' }}>
+            <div className='sidebar-icons'> <i className="far fa-book" style={{ marginRight: "1rem", fontSize: '1.5rem' }}></i> </div>
+            Настройки
           </div>
           <i className="far fa-long-arrow-alt-right sidebar-arrow"></i>
         </NavLink>

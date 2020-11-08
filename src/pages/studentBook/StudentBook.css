@@ -1,0 +1,21 @@
+.stbook-table-header {
+    background-color:rgba(236, 246, 255, 0.6);
+    margin: 0 -2rem;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    justify-content: space-between;
+}
+.stbook-table-course-nav {
+    display: flex;
+
+}
+.stbook-table-course-item {
+    border-bottom: 1px solid #3F8DD2;
+}
+.stbook-table-header li {
+    margin-right: 3rem;
+    padding: 2rem 0;
+    color: #3F8DD2;
+    cursor: pointer
+}

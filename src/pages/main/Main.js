@@ -1,8 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { MainLayout } from "../../layouts/MainLayout";
 import "./Main.css";
 
 export const Main = () => {
+  
+ 
+
+  const [dropdown, setDropdown] = useState([
+    {
+      active: true,
+      title: "Уважаемые студенты! Изучите информацию",
+      desc:
+        "Для уточнения Вашего статуса и получения информации о государственной поддержке в рамках программ реализуемых в регионах, Вы можете обратиться через интернет-ресурсы или явиться в организации, предоставляющие услуги (ЦОН, ЦЗН, отделения Казпочты) или акиму сельского округа.",
+      id: 0,
+    },
+    {
+      active: true,
+      title: "Уважаемые студенты! Изучите информацию",
+      desc:
+        "Для уточнения Вашего статуса и получения информации о государственной поддержке в рамках программ реализуемых в регионах, Вы можете обратиться через интернет-ресурсы или явиться в организации, предоставляющие услуги (ЦОН, ЦЗН, отделения Казпочты) или акиму сельского округа.",
+      id: 1,
+    },
+    {
+      active: true,
+      title: "Уважаемые студенты! Изучите информацию",
+      desc:
+        "Для уточнения Вашего статуса и получения информации о государственной поддержке в рамках программ реализуемых в регионах, Вы можете обратиться через интернет-ресурсы или явиться в организации, предоставляющие услуги (ЦОН, ЦЗН, отделения Казпочты) или акиму сельского округа.",
+      id: 2,
+    },
+  ]);
   const info = [
     {
       icon: "far fa-university",
@@ -23,6 +49,15 @@ export const Main = () => {
       subtitle: "Учебная группа",
     },
   ];
+
+  const dropdownHandler = (id) =>{
+    setDropdown (dropdown.map((item, index) => {
+      if (id === item.id){
+        return { ...item, active: !item.active }
+      }
+      return item
+    }))
+  }
 
   return (
     <MainLayout>
@@ -99,16 +134,29 @@ export const Main = () => {
             руководителя университета и подразделений.
           </div>
         </div>
-        <div className="main-info">
+        {<div className="main-info">
           <p className="page-txt">Текущая информация:</p>
-          <div className="main-info-current">
-            <div className="main-info-inner">
-              <i className="fas fa-exclamation exclamation-icon"></i>
-              <p className="main-info-text">Уважаемые студенты! Изучите информацию</p>
-            </div>
-            <i className="far fa-angle-down"></i>
-          </div>
-        </div>
+          {dropdown.map((dropdown, index) => {
+            return (
+              <div key={index}>
+                <div className="main-info-current" onClick={ () => { dropdownHandler(dropdown.id) }}>
+                  <div className="main-info-inner">
+                    <i className="fas fa-exclamation exclamation-icon"></i>
+                    <p className="main-info-text">
+                      {dropdown.title}
+                    </p>
+                  </div>
+                  <i className="far fa-angle-down"></i>
+                </div>
+                {dropdown.active && (
+                  <div className="main-info-text text-info">
+                    {dropdown.desc}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div> }
       </div>
     </MainLayout>
   );
