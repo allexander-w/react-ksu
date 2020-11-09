@@ -53,11 +53,12 @@
   bottom: -7rem
 }
 .main-user-information {
-  margin-left: 24px;
+  margin: 2rem 0 0 24px;
 }
 .main-user-name {
   font-size: 1.5rem;
   font-weight: 500;
+  margin-bottom: 6px;
 }
 .main-user-course {
   font-size: 1.2rem;
@@ -98,7 +99,8 @@
   font-size: 1.2rem;
 }
 .main-card-money {
-  background: url("../../assets/img/card.png") no-repeat #6266EB 100% 0;
+  background: url("../../assets/img/card.png") no-repeat #6266EB 70% 50%;
+  background-size: cover;
   color: #fff;
   border-radius: 16px;
   padding: 1.5rem 2rem;
@@ -125,4 +127,52 @@
   transform: rotate(-10deg);
   font-size: 4rem;
   margin-right: 30px;
+}
+.main-info{
+}
+.main-info-box{
+  margin: 5rem 0 4rem;
+}
+.main-info-title{
+  margin-bottom: 1rem;
+}
+.main-warning-box{
+  height: 12rem;
+  display: flex;
+  align-items: center;
+  background-color: #FFBC59;
+  color: #fff;
+  padding: 2rem 4rem;
+  border-radius: 16px;
+  margin-bottom: 4rem;
+}
+.main-warning-icon{
+  font-size: 1.5rem;
+  margin-right: 2rem;
+}
+.main-warning-text{
+  font-size: 1.5rem;
+  line-height: 28px;
+}
+.main-info-current{
+  margin-top: 1.5rem;
+  padding: 1.5rem 4rem;
+  background-color: #F3F0F9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  height: 5rem;
+  border-radius: 16px;
+}
+.main-info-inner{
+  display: flex;
+  align-items: center;
+}
+.exclamation-icon{
+  font-size: 2rem;
+  margin-right: 4rem;
+}
+.main-info-text{
+  font-size: 1.5rem;
 }

@@ -33,9 +33,9 @@ export const Main = () => {
 
       <div className="main-head-title">
         <h3 className="page-title main-title">
-          Личный кабинет студента / магитсранта
+          Личный кабинет студента / магистранта
         </h3>
-        <p className="page-txt">Привет, имя студента, желаем хорошего дня! s</p>
+        <p className="page-txt">Привет, имя студента, желаем хорошего дня!</p>
       </div>
 
       <div className="main-user">
@@ -75,6 +75,38 @@ export const Main = () => {
           <div className="main-card-block">
             <p className="main-card-title">2 000 000.00</p>
             <p className="main-card-subtitle">Остаток по оплате за год</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="main-info">
+        <div className="main-info-box">
+          <h3 className="page-title main-info-title">Информация к прочтению</h3>
+          <p className="page-txt">
+            Дополнительная информация для студентов и магистрантов
+          </p>
+        </div>
+
+        <div className="main-warning-box">
+          <div className="main-warning-icon">
+            <i className="far fa-exclamation-triangle"></i>
+          </div>
+
+          <div className="main-warning-text">
+            В рамках акции «Чистая сессия» организованы штаб и факультетские
+            посты, работают телефоны доверия. Обо всех нарушениях Вы можете
+            сообщить по указанным телефонам и в виртуальные приемные
+            руководителя университета и подразделений.
+          </div>
+        </div>
+        <div className="main-info">
+          <p className="page-txt">Текущая информация:</p>
+          <div className="main-info-current">
+            <div className="main-info-inner">
+              <i className="fas fa-exclamation exclamation-icon"></i>
+              <p className="main-info-text">Уважаемые студенты! Изучите информацию</p>
+            </div>
+            <i className="far fa-angle-down"></i>
           </div>
         </div>
       </div>

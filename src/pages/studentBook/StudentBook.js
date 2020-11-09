@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 
 import { MainLayout } from "../../layouts/MainLayout";
 import "./StudentBook.css";
 
 export const StudentBook = (props) => {
+  
+  const [a, setA] = useState({})
+  
   const [courses, setCources] = useState([
     {
       title: "Первый курс",
@@ -23,7 +26,7 @@ export const StudentBook = (props) => {
     {
       title: "Четвертый курс",
       active: false,
-      id: 2,
+      id: 3,
     },
   ]);
 
@@ -39,6 +42,27 @@ export const StudentBook = (props) => {
       id: 1,
     },
   ]);
+
+  const changeCourse = id => {
+      setCources( courses.map(item => {
+          if( item.id === id ) {
+              return { ...item , active: true}
+          }
+          return { ...item, active: false }
+      }) )
+  }
+
+  const fetch = useCallback( async  () => {
+   const url = 'https://oreshek.000webhostapp.com/api/auth/login'
+
+  const data = await (await fetch(url, {
+     method: "POST"
+   })).json()
+
+  setA(data)
+  //  const res = await data.json()
+  console.log(data)   
+  }, [setA])
 
   return (
     <MainLayout>
@@ -64,6 +88,7 @@ export const StudentBook = (props) => {
               <li
                 key={index}
                 className={item.active ? "stbook-table-course-item" : null}
+                onClick= { () => {changeCourse(item.id)} }
               >
                 {item.title}
               </li>
@@ -82,7 +107,11 @@ export const StudentBook = (props) => {
             );
           })}
         </ul>
+
+        <button onClick={ () => { fetch() }}>fetch</button>
       </div>
+
+
     </MainLayout>
   );
 };
