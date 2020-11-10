@@ -1,11 +1,9 @@
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 
 import { MainLayout } from "../../layouts/MainLayout";
 import "./StudentBook.css";
 
 export const StudentBook = (props) => {
-  
-  const [a, setA] = useState({})
   
   const [courses, setCources] = useState([
     {
@@ -52,18 +50,6 @@ export const StudentBook = (props) => {
       }) )
   }
 
-  const fetch = useCallback( async  () => {
-   const url = 'https://oreshek.000webhostapp.com/api/auth/login'
-
-  const data = await (await fetch(url, {
-     method: "POST"
-   })).json()
-
-  setA(data)
-  //  const res = await data.json()
-  console.log(data)   
-  }, [setA])
-
   return (
     <MainLayout>
       <div className="main-date">
@@ -107,10 +93,7 @@ export const StudentBook = (props) => {
             );
           })}
         </ul>
-
-        <button onClick={ () => { fetch() }}>fetch</button>
       </div>
-
 
     </MainLayout>
   );

@@ -7,7 +7,6 @@ import { MainContext } from './contexts/MainContext';
 
 function App() {
 
-
   const func = num => {
     console.log(num)
   }
